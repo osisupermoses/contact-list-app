@@ -6,3 +6,12 @@ plugins {
     id("com.android.library").apply(false)
     id("org.jetbrains.compose").apply(false)
 }
+
+buildscript {
+    val agp_version by extra("8.1.0")
+    val sqlDelight_version by extra("2.0.0")
+    dependencies {
+        classpath("app.cash.sqldelight:gradle-plugin:$sqlDelight_version")
+        classpath("com.android.tools.build:gradle:$agp_version")
+    }
+}
